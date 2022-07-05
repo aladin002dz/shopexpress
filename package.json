@@ -1,0 +1,30 @@
+{
+  "name": "shopexpress",
+  "version": "1.0.0",
+  "description": "Express Web Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aladin002dz/shopexpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aladin002dz/shopexpress/issues"
+  },
+  "homepage": "https://github.com/aladin002dz/shopexpress#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.3",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.0.2"
+  }
+}
