@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const connectdb = require("./db_connection.js");
+const connectdb = require("./db_connection");
 
 const productsRoutes = require("./routes/products");
 const userRoutes = require("./routes/user");
