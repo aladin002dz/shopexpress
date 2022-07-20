@@ -65,3 +65,13 @@ const productInfo = new FormData();
 productInfo.append("productData", JSON.stringify(productData));
 productInfo.append("myfile", selectedImage);
 ```
+
+## ToDos
+
+- [x] Get All Products.
+- [x] Signup.
+- [x] Login.
+- [x] Add Product.
+- [ ] Delete Product.
+- [ ] Token in Http Requests.
+- [ ] Update Product.
