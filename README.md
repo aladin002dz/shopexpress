@@ -48,3 +48,20 @@ Expressjs Web Api
   "pwd": "password"
 }
 ```
+
+## Add Product
+
+**post** http request to `http://localhost:3001/api/products`
+
+**FormData**:
+
+```js
+const productData = {
+  price,
+  description,
+};
+
+const productInfo = new FormData();
+productInfo.append("productData", JSON.stringify(productData));
+productInfo.append("myfile", selectedImage);
+```

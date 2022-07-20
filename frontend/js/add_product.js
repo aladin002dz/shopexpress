@@ -10,22 +10,22 @@ function addProduct(e) {
     description,
   };
 
-  const post = new FormData();
-  post.append("postData", JSON.stringify(productData));
-  post.append("myfile", selectedImage);
+  const productInfo = new FormData();
+  productInfo.append("productData", JSON.stringify(productData));
+  productInfo.append("myfile", selectedImage);
 
   fetch("http://localhost:3001/api/products/", {
     method: "post",
     /*     headers: {
       Authorization: `Bearer ${user.token}`,
     }, */
-    body: post,
+    body: productInfo,
   })
     .then((reponse) => {
       console.log("Response: ");
       console.log(reponse);
       if (reponse.ok) {
-        alert("Post ajouté avec succés!");
+        alert("Product successfully Added!");
         window.location.replace("../index.html");
       } else {
         alert("Error Adding product!");

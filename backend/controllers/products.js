@@ -35,7 +35,7 @@ exports.getAllProducts = (req, res, next) => {
 exports.createProduct = (req, res, next) => {
   let db = connectdb();
   console.log(req.body);
-  postData = JSON.parse(req.body.postData);
+  productData = JSON.parse(req.body.productData);
   let imageUrl = "";
   if (req.files[0]) {
     imageUrl = `${req.protocol}://${req.get("host")}/images/${
@@ -43,7 +43,7 @@ exports.createProduct = (req, res, next) => {
     }`;
   }
 
-  let sql = `INSERT INTO products (description, price, imgUrl) VALUES ( '${postData.description}', ${postData.price}, '${imageUrl}')`;
+  let sql = `INSERT INTO products (description, price, imgUrl) VALUES ( '${productData.description}', ${productData.price}, '${imageUrl}')`;
 
   try {
     db.run(sql);
