@@ -1,7 +1,6 @@
 main();
 
 function main() {
-  console.log("Hello World!");
   fetch("http://localhost:3001/api/products")
     .then((response) => response.json())
     .then((products) => {
@@ -14,7 +13,7 @@ function main() {
         <div class="card mb-3">
         <div class="row g-0">
         <div class="col-md-4">
-            <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="..." />
+            <img src="${product.imgUrl}"  class="rounded-start"  width="230" height="150" alt="..." />
         </div>
         <div class="col-md-8">
             <div class="card-body">

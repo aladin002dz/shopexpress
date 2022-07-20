@@ -43,19 +43,12 @@ exports.createProduct = (req, res, next) => {
     }`;
   }
 
-  let sql = `INSERT INTO posts (description, price, imgUrl) VALUES ( '${postData.description}', ${postData.price}, '${imageUrl}')`;
+  let sql = `INSERT INTO products (description, price, imgUrl) VALUES ( '${postData.description}', ${postData.price}, '${imageUrl}')`;
 
   try {
     db.run(sql);
-    console.log("Post successfully added!");
-    db.all("SELECT * FROM posts", (err, rows) => {
-      if (err) {
-        res.status(400).json({
-          error: err.message,
-        });
-      }
-      res.status(200).json(rows);
-    });
+    console.log("Product successfully added!");
+    res.status(200).json("Product successfully added!");
   } catch (err) {
     res.status(400).json({
       error: err.message,
