@@ -43,11 +43,11 @@ exports.createProduct = (req, res, next) => {
     }`;
   }
 
-  let sql = `INSERT INTO posts (id, content, userId, postedOn, imgUrl) VALUES (NULL, '${postData.contenu}', ${postData.userId}, '${postData.postedOn}', '${imageUrl}')`;
+  let sql = `INSERT INTO posts (description, price, imgUrl) VALUES ( '${postData.description}', ${postData.price}, '${imageUrl}')`;
 
   try {
     db.run(sql);
-    console.log("Post ajouté avec succés!");
+    console.log("Post successfully added!");
     db.all("SELECT * FROM posts", (err, rows) => {
       if (err) {
         res.status(400).json({

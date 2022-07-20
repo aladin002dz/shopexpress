@@ -12,7 +12,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="min-vh-100">
     <header>
@@ -21,14 +21,39 @@
           <a class="navbar-brand" href="#">Shop Express</a>
         </div>
       </nav>
-      <div class="container d-flex flex-row-reverse mt-5">
-        <a href="/html/AddProduct.html" class="btn btn-primary">Add Product</a>
-      </div>
     </header>
     <main class="container mt-5 min-vh-75">
-      <section>
-        <div id="products"></div>
-      </section>
+      <form>
+        <div class="form-group mb-3">
+          <label for="inputDescription">Description</label>
+          <textarea
+            class="form-control"
+            id="inputDescription"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="form-group mb-3">
+          <label for="inputPrice">Price</label>
+          <input
+            class="form-control"
+            type="number"
+            id="inputPrice"
+            name="inputPrice"
+            min="1"
+            max="50000"
+            value="1"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputImage" class="form-label"
+            >Default file input example</label
+          >
+          <input class="form-control" type="file" id="inputImage" />
+        </div>
+        <button id="btnAddProduct" type="submit" class="btn btn-primary mt-5">
+          Submit
+        </button>
+      </form>
     </main>
     <footer class="mt-auto">
       <div class="container">
@@ -41,6 +66,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/add_product.js"></script>
   </body>
 </html>
